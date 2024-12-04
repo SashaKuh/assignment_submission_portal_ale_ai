@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Як запустити проєкт
 
-## Getting Started
+Цей проект побудований за допомогою **Next.js** і має дві основні конфігурації запуску: для **розробки** та **продакшн** середовищ. Ось інструкції, як це зробити:
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 1. Локальний запуск в режимі розробки
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Щоб запустити проект на вашому локальному комп'ютері в режимі розробки, виконайте наступні кроки:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Кроки:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Клонування репозиторію:**
+    ```bash
+    git clone https://github.com/your-username/your-repo-name.git
+    cd your-repo-name
+    ```
 
-## Learn More
+2. **Інсталяція залежностей:**
+    Для інсталяції всіх залежностей, використовуйте команду:
+    ```bash
+    npm install
+    ```
 
-To learn more about Next.js, take a look at the following resources:
+3. **Запуск проєкту в режимі розробки:**
+    Виконайте команду:
+    ```bash
+    npm run dev
+    ```
+    Ця команда запускає сервер на **localhost:3000** за замовчуванням. Тепер ви можете переглядати проєкт за адресою [http://localhost:3000](http://localhost:3000).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 2. Запуск у продакшн середовищі
 
-## Deploy on Vercel
+Щоб запустити проект у **продакшн середовищі**, потрібно спочатку побудувати проєкт і потім запустити його. Ось як це зробити:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Кроки:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **Будування проєкту:**
+    Спочатку потрібно створити продакшн-білд. Для цього використовуйте команду:
+    ```bash
+    npm run build
+    ```
+
+2. **Запуск у продакшн середовищі:**
+    Після того, як білд буде готовий, запустіть продакшн сервер:
+    ```bash
+    npm start
+    ```
+    Ця команда запустить сервер у продакшн-режимі, який буде доступний за адресою [http://localhost:3000](http://localhost:3000).
+
+    **Примітка:** На продакшн-сервері ви можете розгортати додаток на Vercel або іншому хостингу, якщо бажаєте.
+
+---
+
+## 3. Тестування
+
+Проєкт включає підтримку для тестування. Щоб виконувати тести, вам потрібно використовувати **Jest** та **React Testing Library** (якщо вони налаштовані).
+
+### Кроки:
+
+1. **Запуск тестів:**
+    Для запуску всіх тестів використовуйте команду:
+    ```bash
+    npm test
+    ```
+    Це запускає всі тести, які знаходяться у файлах з розширенням `.test.tsx` або `.spec.tsx`.
+
+2. **Запуск тестів у інтерактивному режимі (TDD):**
+    Якщо ви хочете використовувати інтерактивний режим для тестування під час розробки, використовуйте:
+    ```bash
+    npm run test:watch
+    ```
+    
+---
