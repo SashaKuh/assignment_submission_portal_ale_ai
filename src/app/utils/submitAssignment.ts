@@ -4,7 +4,7 @@ import { FormData } from "../types/form";
 export const submitAssignment = async (formData: FormData) => {
         try {
                 const response = await axios.post(
-                        "https://tools.qa.public.ale.ai/api/tools/candidates/assignmentss",
+                        "https://tools.qa.public.ale.ai/api/tools/candidates/assignments",
                         formData
                 );
                 if (response.status === 200) {
